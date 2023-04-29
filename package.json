@@ -1,0 +1,23 @@
+{
+  "name": "nodeappwithcicd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MrNobody0629/nodeappwithcicd.git"
+  },
+  "author": "Anuj Verma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrNobody0629/nodeappwithcicd/issues"
+  },
+  "homepage": "https://github.com/MrNobody0629/nodeappwithcicd#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
