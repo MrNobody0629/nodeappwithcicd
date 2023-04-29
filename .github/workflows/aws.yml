@@ -14,8 +14,8 @@ jobs:
       - name: SSH into EC2 instance
         uses: appleboy/ssh-action@master
         with:
-          host: 13.233.141.241
-          username: ubuntu
+          host: ${{ secrets.CICD_SERVER_HOST }}
+          username: ${{ secrets.CICD_SERVER_USER_NAME }}
           key: ${{ secrets.CICD_SERVER_KEY }}
           script: |
             cd /home/ubuntu/project/nodeappwithcicd
