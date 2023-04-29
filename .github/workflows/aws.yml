@@ -1,0 +1,22 @@
+name: Node.js CI/CD on EC2 CICSSERVER
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: SSH into EC2 instance
+        uses: appleboy/ssh-action@master
+        with:
+          host: 13.233.141.241
+          username: ubuntu
+          key: ${{ secrets.CICD_SERVER_KEY }}
+          script: |
+            cd /home/ubuntu/project/nodeappwithcicd
+            ./deploy.sh
